@@ -6,11 +6,9 @@ print("Name: Ashley Bryant")
 
 with open('slicing-file.txt', 'r') as hfile:
     varList = hfile.readlines()
-print(f'{varList[24:25:]}')
-print(f'{varList[2:5:]}')
-print(f'{varList[17:12:-2]}')
-print(f'{varList[10:13:]}')
-print(f'{varList[8:5:-1]}')
+myList = ((f'{varList[24:25:]} '),(f'{varList[2:5:]} '),(f'{varList[17:12:-2]} '),(f'{varList[10:13:]} '),(f'{varList[8:5:-1]}'))
 
-quote =' '.join(['Whether', 'you', 'think', 'you', 'can', 'or', 'think', 'you', 'can\'t,', 'you', 'are', 'right'])
+myString = ''.join(myList)
+
+quote = str(myString).replace('[','').replace(']','').replace(',','').replace('\n','').replace("'",'')
 print(quote)
